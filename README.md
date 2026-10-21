@@ -1,35 +1,37 @@
 # Field Ops — Construction Works
 
-A standalone, browser-based 3D construction simulator built for touch screens and desktop.
+A separate browser-based 3D construction simulator. This project is informed by the expanded Field Ops 3D game in `xz64uj777/Chatdemo`, but does not replace or overwrite it.
 
-## Current playable foundation
+## Foundation branch
 
-- Three-dimensional site with roads, terrain, trees, a marked foundation work zone, and a follow camera.
-- Three selectable machines: excavator, wheel loader, and dump truck.
-- Touch-friendly drive controls and contract-specific work actions.
-- A four-stage starter contract chain: excavate the foundation, haul spoil, spread gravel, and place concrete.
-- Site visuals change as work is completed; cash, rank, rewards, and contract progress update during play.
-- Built with Three.js 0.160.0 from a browser ES module. No build step is required.
+- 3D construction site, marked work zone, camera follow, and touch-screen layout.
+- Starter excavator, wheel loader, and dump truck.
+- Four starter contract stages: foundation excavation, spoil hauling, gravel spreading, and concrete placement.
+- Cash, rank, rewards, contract progress, and visible site changes.
+- Three.js 0.160.0; browser ES module, no build step required.
+
+## Controls — minimal-controls branch
+
+The experimental `minimal-controls` branch replaces the direction pad and extra tool buttons with dual touch joysticks:
+
+- **Left joystick:** drive and steer.
+- **Right joystick:** operate the boom/stick/bucket where the selected machine supports them.
+- **Machine:** cycle machines.
+- **Action:** perform the current contract action when in the right location with the required machine.
+- **Menu:** open contracts/pause.
+
+Only the essential action controls remain visible; detailed menus are opened when needed.
+
+## Important gameplay status
+
+This is still an early foundation, not yet feature-equivalent to the older Field Ops 3D game. In particular, true terrain deformation, persistent material quantities, truck loading/hauling physics, machine-specific hydraulic physics, save persistence, audio, and multi-site progression still need implementation and testing. Some starter tasks currently use simplified visual progress rather than full physical simulation.
+
+The old game already contains six machine types, six contract/job stages, a two-joystick layout, persistent local progress, material transfer and delivery, continuous grading, asphalt paving, excavation, demolition, crane girder placement, fuel/wear, audio and effects, a minimap, and multiple distinct work zones. New-work development should build on these lessons rather than regress to a button-heavy or repetitive task loop.
 
 ## Run it
 
-Open `index.html` through a static web server or GitHub Pages. Because it imports Three.js as an ES module, opening the file directly from a local filesystem may not work in every browser.
-
-## Controls
-
-- Direction pad: drive and turn the current machine.
-- **Machine**: cycle between the available machines.
-- **Perform Work**: advance the active contract when using the required machine and close enough to the work zone.
-- **Contracts / Pause**: review the contract chain and return to the site.
-
-## Project direction
-
-This is a separate new-work branch, not a replacement for the existing BuildWorks / Chatdemo project. The goal is a less repetitive construction game with varied contracts, persistent site changes, realistic machine interactions, multiple sites, progression, and phone-friendly controls.
-
-## Current build limitations
-
-This is an early playable foundation, not a finished simulator. Machine physics, true material loading/transport, save persistence, richer terrain deformation, audio, and multiple fully playable sites remain planned work. The current work button advances task stages with visible site changes; it does not yet simulate full excavation or vehicle physics.
+Serve `index.html` from a web server or GitHub Pages. It imports Three.js 0.160.0 from jsDelivr, so an internet connection is required.
 
 ## Deployment
 
-The repository includes a GitHub Actions workflow for GitHub Pages. After Pages is enabled for this repository with **GitHub Actions** as its build/deployment source, pushes to `main` or `field-ops-foundation` can publish the site.
+The repository has a GitHub Actions Pages workflow. A live URL is not claimed until a deployment has been confirmed successfully.

@@ -35,3 +35,23 @@ Serve `index.html` from a web server or GitHub Pages. It imports Three.js 0.160.
 ## Deployment
 
 The repository has a GitHub Actions Pages workflow. A live URL is not claimed until a deployment has been confirmed successfully.
+
+## Development direction: connected depot-to-site career
+
+The next playable milestone is a small connected world, not a menu of disconnected jobs.
+
+### Build order
+1. **Depot and local roads:** establish the player's home yard, equipment parking, loading area, and drivable road connection to a first construction site.
+2. **Optional lowboy transport loop:** a tractor and lowboy trailer become a usable vehicle. Load an owned machine, transport it to the site, unload it, and return it to the yard. Include a clear skip/delivery option so transport never becomes mandatory busywork.
+3. **One complete residential build:** demolition/clearing, excavation, spoil removal, sub-base, forms/rebar, concrete delivery and placement, framing lifts, roofing/exterior, driveway and landscaping. Each stage visibly changes the same property.
+4. **Project replay and practice:** resume saved career progress, replay unlocked stages without career rewards, reset a vehicle to its start point, and use a free-practice mode.
+5. **Expand the world and fleet:** quarry and suppliers, varied landscapes, then additional building types and machines such as concrete mixer trucks, articulated-boom concrete pumps, telehandlers, cranes, rollers, pavers, and utility equipment.
+
+### Design rules
+- Keep the normal HUD to two joysticks and only essential actions; put transport choices, stage selection, and settings in the site-office menu.
+- Owned equipment should live at the depot and be transported or delivered to a job, not simply appear beside the player.
+- Offer three choices where appropriate: drive/operate the whole process, pay for delivery/skip routine steps, or practice without career pressure.
+- The world and construction site should visibly retain completed work; material should have a source, destination, and purpose.
+- Make the first end-to-end residential project fun and reliable before adding a large fleet or a huge map.
+
+This is the intended roadmap, not a claim that all these systems are already implemented. The current branch remains an early prototype; its starter tasks still use simplified visual progress and need browser/mobile testing.
